@@ -1,0 +1,7 @@
+{
+  "name": "jsedn",
+  "description": "edn parser, encode/decode for js",
+  "main": [
+    "jsedn.js"
+  ]
+}
