@@ -500,7 +500,7 @@ require.register("jsedn/lib/atoms.js", function (exports, module) {
 
     __extends(Symbol, _super);
 
-    Symbol.prototype.validRegex = /[0-9A-Za-z.*+!\-_?$%&=:#{}/]+/;
+    Symbol.prototype.validRegex = /[0-9A-Za-z.*+!\-_?$%&=<>:#{}/]+/;
 
     Symbol.prototype.invalidFirstChars = [":", "#", "/"];
 
