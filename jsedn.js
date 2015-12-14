@@ -507,7 +507,7 @@ require.register("jsedn/lib/atoms.js", function (exports, module) {
   Symbol = (function(superClass) {
     extend(Symbol, superClass);
 
-    Symbol.prototype.validRegex = /[0-9A-Za-z.*+!\-_?$%&=:#\/]+/;
+    Symbol.prototype.validRegex = /[0-9A-Za-z.*+!\-_?$%&=<>:#{}\/]+/;
 
     Symbol.prototype.invalidFirstChars = [":", "#", "/"];
 
@@ -1572,12 +1572,6 @@ require.register("jsedn/lib/tags.js", function (exports, module) {
   })(Prim);
 
   tagActions = {
-    uuid: {
-      tag: new Tag("uuid"),
-      action: function(obj) {
-        return obj;
-      }
-    },
     inst: {
       tag: new Tag("inst"),
       action: function(obj) {
